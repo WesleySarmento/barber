@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,14 +18,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <title>Barber - A Sua barbearia!</title>
   </head>
   <body>
     <div class="bg-home">
       <header>
         <nav class="header-content container">
-          <div class="header-icons">
+          <div class="header-icons" data-aos="fade-down">
             <a href="#">
               <i class="fa-brands fa-instagram fa-2x"></i>
             </a>
@@ -36,29 +37,44 @@
             </a>
           </div>
 
-          <div class="header-logo">
-            <img src="assets/logo.svg" alt="Logo da barbearia" />
+          <div class="header-logo" data-aos="fade-up" data-aos-delay="300">
+            <img
+              src="assets/logo.svg"
+              alt="Logo da barbearia"
+              data-aos="flip-up"
+              data-aos-delay="300"
+              data-aos-duration="1500"
+            />
           </div>
 
-          <div>
+          <div data-aos="fade-down">
             <a class="header-button" href="#">Agendar horário</a>
           </div>
         </nav>
 
-        <main class="hero container">
+        <main class="hero container" data-aos="fade-up" data-aos-delay="400">
           <h1>ESTILO É UM REFLEXO DA SUA ATITUDE E SUA PERSONALIDADE.</h1>
           <p>Horário de funcionamento: 09:00 às 19:00</p>
-          <a href="#" class="button-contact" target="_blank">Agendar horário</a>
+          <a
+            href="https://api.whatsapp.com/send/?phone=5561981211975&text=Quero%20fazer%20um%20agendamento%20hoje!"
+            class="button-contact"
+            target="_blank"
+            >Agendar horário</a
+          >
         </main>
       </header>
     </div>
 
     <section class="about">
       <div class="container about-content">
-        <div>
+        <div data-aos="zoom-in" data-aos-delay="200">
           <img src="assets/images.svg" alt="Imagem sobre a barbearia" />
         </div>
-        <div class="about-description">
+        <div
+          class="about-description"
+          data-aos="zoom-out-left"
+          data-aos-delay="100"
+        >
           <h2>Sobre</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus ea
@@ -86,21 +102,21 @@
       </div>
 
       <section class="haircuts">
-        <div class="haircut">
+        <div class="haircut" data-aos="fade-up" data-aos-delay="150">
           <img src="assets/corte1.png" alt="Corte normal" />
           <div class="haircut-info">
             <strong>Corte Normal</strong>
             <button>R$ 45,00</button>
           </div>
         </div>
-        <div class="haircut">
+        <div class="haircut" data-aos="fade-up" data-aos-delay="300">
           <img src="assets/corte2.png" alt="Barba" />
           <div class="haircut-info">
             <strong>Barba Completa</strong>
             <button>R$ 35,00</button>
           </div>
         </div>
-        <div class="haircut">
+        <div class="haircut" data-aos="fade-up" data-aos-delay="400">
           <img src="assets/corte3.png" alt="Cabelo e Barba" />
           <div class="haircut-info">
             <strong>Cabelo e Barba</strong>
@@ -109,5 +125,51 @@
         </div>
       </section>
     </section>
+
+    <div class="services">
+      <h2>Venha nos conhecer</h2>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30673.30366349888!2d-47.97275228821046!3d-16.057031344606266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9359877ae8810de7%3A0xf6419068b0b5de46!2sBarbearia%20SANTOHOMEM!5e0!3m2!1spt-BR!2sbr!4v1691366142710!5m2!1spt-BR!2sbr"
+      width="100%"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+    <footer class="footer">
+      <div class="footer-icons">
+        <a href="#">
+          <i class="fa-brands fa-instagram fa-2x"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-facebook fa-2x"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-tiktok fa-2x"></i>
+        </a>
+      </div>
+
+      <div class="">
+        <img src="assets/logo.svg" alt="Logo Barbearia" />
+      </div>
+
+      <p>Copyright 2023 | Dev Barbearia - Todos os direitos reservados.</p>
+    </footer>
+
+    <a
+      href="https://api.whatsapp.com/send/?phone=5561981211975&text=Quero%20fazer%20um%20agendamento%20hoje!"
+      class="btn-whatsapp"
+      target="_blank"
+      data-aos="zoom-in-up"
+      data-aos-delay="400"
+    >
+      <img src="assets/whatssapp.svg" alt="Botão whatssapp" />
+      <span class="tooltip-text">Agende seu horário</span>
+    </a>
+
+    <script src="script.js"></script>
   </body>
 </html>
